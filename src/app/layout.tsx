@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Urbanist } from "next/font/google";
+import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
 
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
 const urbanist = Urbanist({
+  variable: "--font-urbanist",
   subsets: ["latin"],
 });
 
@@ -18,7 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${urbanist.className} antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${urbanist.variable} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
