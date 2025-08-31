@@ -1,8 +1,9 @@
-// import Image from "next/image";
+import { Header } from "@/widgets/header";
 
-export default function Home() {
+export default function Page() {
   return (
-    <div className="min-h-screen font-[family-name:var(--font-geist-sans)]">
+    <div className="bg-background text-foreground min-h-screen max-w-[1920px]">
+      <Header />
       <main className=""></main>
       <footer className=""></footer>
     </div>
