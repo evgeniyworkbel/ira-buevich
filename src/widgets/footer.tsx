@@ -1,0 +1,74 @@
+import { contacts } from "@/shared/contacts";
+import { navItems } from "@/shared/navigation";
+import { Container } from "@/shared/ui";
+import Image from "next/image";
+import Link from "next/link";
+
+export function Footer() {
+  return (
+    <Container className="bg-background-surface text-foreground-surface rounded-t-[20px]">
+      <footer
+        id={navItems.contacts.href}
+        className="grid grid-cols-1 justify-items-center gap-8 text-center lg:grid-cols-5 lg:items-center lg:gap-5"
+      >
+        <Link href="/">
+          <Image
+            src="/logo.svg"
+            alt="Логотип школы английского языка, написано Lingua текстом"
+            width={160}
+            height={80}
+          />
+        </Link>
+        {/* todo: подумать как вывести красиво инфу на десктопе */}
+        <div>
+          <p className="flex flex-col">
+            <span>ИП Буевич И.Е.&nbsp;</span>
+            <span>св-во о регистрации № 392022782 от 11.03.2025</span>
+          </p>
+          <address className="not-italic">г. Витебск, ул.Ленина 12а, офис 41/2</address>
+        </div>
+        <ul className="flex flex-col gap-2">
+          <Link href={navItems.courses.href}>{navItems.courses.label}</Link>
+          <Link href={navItems.speakingClub.href}>{navItems.speakingClub.label}</Link>
+        </ul>
+        <ul className="flex flex-col gap-2">
+          <Link href={navItems.aboutMe.href}>{navItems.aboutMe.label}</Link>
+          <Link href={navItems.faq.href}>{navItems.faq.label}</Link>
+        </ul>
+        <ul className="flex gap-[18px]">
+          <li>
+            <Link href={contacts.instagram} target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/instagram.svg"
+                alt="Декоративная иконка со ссылкой на инстаграмм Буевич Ирины"
+                width={32}
+                height={32}
+              />
+            </Link>
+          </li>
+          <li>
+            <Link href={contacts.mobilePhone} target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/phone.svg"
+                alt="Декоративная иконка со ссылкой на номер мобильного телефона Буевич Ирины"
+                width={32}
+                height={32}
+              />
+            </Link>
+          </li>
+
+          <li>
+            <Link href={contacts.location} target="_blank" rel="noopener noreferrer">
+              <Image
+                src="/location.svg"
+                alt="Декоративная иконка со ссылкой на карту с местонахождением офиса Буевич Ирины"
+                width={32}
+                height={32}
+              />
+            </Link>
+          </li>
+        </ul>
+      </footer>
+    </Container>
+  );
+}
