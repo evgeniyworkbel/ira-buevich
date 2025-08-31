@@ -10,16 +10,19 @@ export function Header() {
       <header className="flex items-center justify-between">
         <Image
           src="/logo.svg"
-          alt="English school brand logo, written Lingua"
+          alt="Логотип школы английского языка, написано Lingua текстом"
           width={160}
           height={80}
         />
         <nav className="hidden justify-between gap-x-14 font-semibold xl:flex">
-          {Object.values(navItems).map((item) => (
-            <Link key={item.href} className={item.className} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
+          <Link href={navItems.courses.href}>{navItems.courses.label}</Link>
+          <Link href={navItems.speakingClub.href}>{navItems.speakingClub.label}</Link>
+          <Link href={navItems.aboutMe.href}>{navItems.aboutMe.label}</Link>
+          <Link href={navItems.faq.href}>{navItems.faq.label}</Link>
+          <Link href={navItems.contacts.href}>{navItems.contacts.label}</Link>
+          <Link className="ml-auto" href={navItems.mobilePhone.href}>
+            {navItems.mobilePhone.label}
+          </Link>
         </nav>
         <Image
           className="xl:hidden"
