@@ -3,6 +3,7 @@ import { Container } from "@/shared/ui";
 import Image from "next/image";
 import Link from "next/link";
 
+// todo: сделать бургер меню на css
 export function Header() {
   return (
     <Container className="bg-background-surface text-foreground-surface">
