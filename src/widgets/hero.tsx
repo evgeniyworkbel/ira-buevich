@@ -9,7 +9,7 @@ export function Hero() {
         className="relative flex min-h-[500px] flex-col justify-between rounded-[40px] border-4 border-[oklch(0.642_0.141_262.6)] px-4.5 py-6 xl:min-h-[450px] xl:justify-end xl:gap-14 xl:border-10 xl:p-12"
       >
         <hgroup className="leading-relaxed xl:max-w-[790px]">
-          <h1 className="text-[22px] font-bold xl:text-4xl">
+          <h1 className="text-[24px] font-bold xl:text-4xl">
             Выбор формата обучения – это важный шаг на пути к знаниям!
           </h1>
           <p className="mt-4 text-base font-bold xl:text-[22px]">
