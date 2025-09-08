@@ -1,4 +1,4 @@
-import { contacts } from "@/shared/contacts";
+import { contacts, developersContacts } from "@/shared/contacts";
 import { navItems } from "@/shared/navigation";
 import { Container } from "@/shared/ui";
 import Image from "next/image";
@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function Footer() {
   return (
-    <Container className="bg-background-surface text-foreground-surface rounded-t-[20px]">
+    <Container className="rounded-t-[20px] bg-background-surface text-foreground-surface">
       <footer
         id={navItems.contacts.href}
         className="grid grid-cols-1 justify-items-center gap-8 text-center lg:grid-cols-5 lg:items-center lg:gap-5"
@@ -56,7 +56,6 @@ export function Footer() {
               />
             </Link>
           </li>
-
           <li>
             <Link href={contacts.location} target="_blank" rel="noopener noreferrer">
               <Image
@@ -69,6 +68,23 @@ export function Footer() {
           </li>
         </ul>
       </footer>
+      <div className="mt-4 flex justify-between gap-3 text-[8px] xl:text-base">
+        <small>© 2025 Lingua Все права защищены.</small>
+        <div className="flex gap-4">
+          <small>
+            Developed by&nbsp;
+            <Link href={developersContacts.programmer} target="_blank" rel="noopener noreferrer">
+              Evgeniy S.
+            </Link>
+          </small>
+          <small>
+            Designed by&nbsp;
+            <Link href={developersContacts.designer} target="_blank" rel="noopener noreferrer">
+              Stanislaw O.
+            </Link>
+          </small>
+        </div>
+      </div>
     </Container>
   );
 }
