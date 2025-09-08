@@ -1,0 +1,47 @@
+import { cn } from "@/shared/lib";
+import { Course } from "../model/types";
+import styles from "./course-card.module.css";
+import { Button, Chip } from "@/shared/ui";
+import { getLessonsLabel } from "../lib/getLessonsLabel";
+
+type CourseCardProps = Course & {
+  className?: string;
+};
+
+export function CourseCard({
+  className,
+  level,
+  lessonsCount,
+  description,
+  listItems,
+}: CourseCardProps) {
+  return (
+    <div
+      className={cn(
+        "grid min-h-[660px] grid-rows-[auto_auto_auto_1fr_auto] gap-6 rounded-[20px] border-3 border-card-border px-4 py-7.5 text-sm xl:min-h-[740px]",
+        styles.card,
+        className,
+      )}
+    >
+      <div className="flex items-center justify-between">
+        <Chip className={cn("px-6 py-2 xl:font-semibold", styles.chip)}>{level}</Chip>
+        <p className="text-xs">{getLessonsLabel(lessonsCount)}</p>
+      </div>
+      <p className="text-lg font-bold">Кому подойдет этот курс</p>
+      <p>{description}</p>
+      <ul
+        aria-label="Чему вы научитесь:"
+        className="list-inside list-disc space-y-3.5 before:mb-3.5 before:block before:text-base before:font-semibold before:content-[attr(aria-label)]"
+      >
+        {listItems.map((item) => (
+          <li key={item} className="marker:text-accent">
+            {item}
+          </li>
+        ))}
+      </ul>
+      <Button className={cn("mx-auto mt-auto w-3/4 py-3 xl:w-full", styles.button)}>
+        Записаться на курс
+      </Button>
+    </div>
+  );
+}

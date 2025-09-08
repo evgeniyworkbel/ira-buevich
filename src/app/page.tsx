@@ -1,4 +1,4 @@
-import { Footer, Header, Hero } from "@/widgets";
+import { Courses, Footer, Header, Hero } from "@/widgets";
 
 export default function Page() {
   return (
@@ -7,6 +7,7 @@ export default function Page() {
       <Header />
       <main>
         <Hero />
+        <Courses />
       </main>
       <Footer />
     </div>

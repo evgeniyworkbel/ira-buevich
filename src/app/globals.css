@@ -6,6 +6,7 @@
   --background-surface: oklch(0.54 0.19 262deg);
   --foreground-surface: oklch(1 0 0deg);
   --accent: oklch(0.72 0.19 150deg);
+  --card-border: oklch(0.642 0.141 262.6deg);
 }
 
 @theme {
@@ -18,6 +19,7 @@
   --color-background-surface: var(--background-surface);
   --color-foreground-surface: var(--foreground-surface);
   --color-accent: var(--accent);
+  --color-card-border: var(--card-border);
   --font-inter: var(--font-inter);
   --font-urbanist: var(--font-urbanist);
 }
