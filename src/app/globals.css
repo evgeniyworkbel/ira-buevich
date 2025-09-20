@@ -3,6 +3,7 @@
 :root {
   --background: oklch(1 0 0deg);
   --foreground: oklch(0 0 0deg);
+  --foreground-secondary: oklch(0.554 0.041 257.4deg);
   --background-surface: oklch(0.54 0.19 262deg);
   --foreground-surface: oklch(1 0 0deg);
   --accent: oklch(0.72 0.19 150deg);
@@ -16,6 +17,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-foreground-secondary: var(--foreground-secondary);
   --color-background-surface: var(--background-surface);
   --color-foreground-surface: var(--foreground-surface);
   --color-accent: var(--accent);

@@ -6,6 +6,7 @@ export function Courses() {
   return (
     <Container className="bg-background-surface text-foreground-surface">
       <Title
+        descriptionClassName="text-foreground-surface"
         title="Выберите свой уровень"
         description="От полного новичка до продвинутого оратора - найдите идеальный курс, соответствующий вашему текущему уровню и целям обучения"
       />
