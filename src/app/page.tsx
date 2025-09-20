@@ -1,4 +1,4 @@
-import { Courses, Footer, Header, Hero } from "@/widgets";
+import { Courses, Footer, Header, Hero, LearningFormats } from "@/widgets";
 
 export default function Page() {
   return (
@@ -6,6 +6,7 @@ export default function Page() {
     <div className="min-h-screen max-w-[1920px] bg-background text-foreground">
       <Header />
       <main>
+        <LearningFormats />
         <Hero />
         <Courses />
       </main>
