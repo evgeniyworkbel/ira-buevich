@@ -24,7 +24,9 @@ export function CourseCard({
       )}
     >
       <div className="flex items-center justify-between">
-        <Chip className={cn("px-6 py-2 xl:font-semibold", styles.chip)}>{level}</Chip>
+        <Chip className={cn("border-card-border xl:font-semibold", styles.chip)} size="md">
+          {level}
+        </Chip>
         <p className="text-xs">{getLessonsLabel(lessonsCount)}</p>
       </div>
       <p className="text-lg font-bold">Кому подойдет этот курс</p>
