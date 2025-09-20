@@ -6,9 +6,9 @@ export default function Page() {
     <div className="min-h-screen max-w-[1920px] bg-background text-foreground">
       <Header />
       <main>
-        <LearningFormats />
         <Hero />
         <Courses />
+        <LearningFormats />
       </main>
       <Footer />
     </div>
