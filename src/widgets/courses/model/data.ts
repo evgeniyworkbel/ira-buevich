@@ -1,4 +1,4 @@
-import { Course } from "@/entities/course";
+import { Course } from "./types";
 
 export const coursesData: Array<Course> = [
   {

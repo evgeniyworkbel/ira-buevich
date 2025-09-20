@@ -1,6 +1,6 @@
 import { Container, Title } from "@/shared/ui";
-import { coursesData } from "../model/courses-data";
-import { CourseCard } from "@/entities/course";
+import { coursesData } from "../model/data";
+import { CourseCard } from "./course-card";
 
 export function Courses() {
   return (

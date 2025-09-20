@@ -1,8 +1,8 @@
 import { cn } from "@/shared/lib";
-import { Course } from "../model/types";
-import styles from "./course-card.module.css";
 import { Button, Chip } from "@/shared/ui";
-import { getLessonsLabel } from "../lib/getLessonsLabel";
+import { Course } from "../../model/types";
+import styles from "./card.module.css";
+import { getLessonsLabel } from "../../lib/getLessonsLabel";
 
 type CourseCardProps = Course & {
   className?: string;
