@@ -8,6 +8,8 @@
   --foreground-surface: oklch(1 0 0deg);
   --accent: oklch(0.72 0.19 150deg);
   --card-border: oklch(0.642 0.141 262.6deg);
+
+  interpolate-size: allow-keywords;
 }
 
 @theme {
