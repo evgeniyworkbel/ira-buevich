@@ -3,3 +3,4 @@ export { Button } from "./button";
 export { Title } from "./title";
 export { Chip } from "./chip";
 export { Accordion } from "./accordion";
+export { Dot } from "./dot";

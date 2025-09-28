@@ -1,4 +1,13 @@
-import { AboutMe, Courses, Faq, Footer, Header, Hero, LearningFormats } from "@/widgets";
+import {
+  AboutMe,
+  Courses,
+  Faq,
+  Footer,
+  Header,
+  Hero,
+  LearningFormats,
+  SpeakingClubs,
+} from "@/widgets";
 
 export default function Page() {
   return (
@@ -8,6 +17,7 @@ export default function Page() {
       <main>
         <Hero />
         <Courses />
+        <SpeakingClubs />
         <LearningFormats />
         <AboutMe />
         <Faq />
