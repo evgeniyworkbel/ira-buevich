@@ -7,7 +7,6 @@ export function TeacherPhotoCard() {
     <div className="relative aspect-[3/4] h-full">
       <div className="relative h-full shrink-0 overflow-hidden rounded-[40px]">
         <Image
-          className="h-auto max-w-full"
           src="/teacher-photo.jpg"
           alt="Фото преподователя и основателя школы Lingua Ирины Буевич"
           width={2481}
