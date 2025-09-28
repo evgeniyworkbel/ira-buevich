@@ -24,7 +24,7 @@ export function LearningFormatCard({
       )}
     >
       <div className="flex flex-col items-center gap-1">
-        <Image src={iconSrc} alt="" width={34} height={34} />
+        <Image src={iconSrc} width={34} height={34} alt="" />
         <h3 className="text-lg font-bold">{title}</h3>
       </div>
       <p>{description}</p>
