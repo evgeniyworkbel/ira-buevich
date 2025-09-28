@@ -10,7 +10,7 @@ export function Faq() {
         description="Выберите формат обучения, который лучше всего соответствует вашим предпочтениям, расписанию и бюджету.
 Все форматы включают одну и ту же высококачественную учебную программу и подход к обучению."
       />
-      <section className="mt-11.5">
+      <section className="mt-10">
         <Accordion className="mx-auto max-w-[900px]" items={faqData} />
       </section>
     </Container>
