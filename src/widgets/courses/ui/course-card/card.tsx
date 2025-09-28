@@ -1,5 +1,5 @@
 import { cn } from "@/shared/lib";
-import { Button, Chip } from "@/shared/ui";
+import { Button, Chip, Dot } from "@/shared/ui";
 import { Course } from "../../model/types";
 import styles from "./card.module.css";
 import { getLessonsLabel } from "../../lib/getLessonsLabel";
@@ -33,10 +33,11 @@ export function CourseCard({
       <p>{description}</p>
       <ul
         aria-label="Чему вы научитесь:"
-        className="list-inside list-disc space-y-3.5 before:mb-3.5 before:block before:text-base before:font-semibold before:content-[attr(aria-label)]"
+        className="list-none space-y-3.5 before:mb-3.5 before:block before:text-base before:font-semibold before:content-[attr(aria-label)]"
       >
         {listItems.map((item) => (
-          <li key={item} className="marker:text-accent">
+          <li key={item} className="flex items-center gap-4">
+            <Dot />
             {item}
           </li>
         ))}
