@@ -6,7 +6,7 @@ import Link from "next/link";
 // todo: сделать бургер меню на css
 export function Header() {
   return (
-    <Container className="bg-background-surface text-foreground-surface">
+    <Container className="bg-background-surface py-4 text-foreground-surface">
       <header className="flex items-center justify-between">
         <Image
           src="/logo.svg"
