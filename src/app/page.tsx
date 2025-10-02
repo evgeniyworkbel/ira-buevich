@@ -3,6 +3,7 @@ import {
   Courses,
   Faq,
   Footer,
+  ReceiveGift,
   Header,
   Hero,
   LearningFormats,
@@ -21,6 +22,7 @@ export default function Page() {
         <LearningFormats />
         <AboutMe />
         <Faq />
+        <ReceiveGift />
       </main>
       <Footer />
     </div>
