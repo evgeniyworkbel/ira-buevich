@@ -52,7 +52,7 @@ body {
     background: linear-gradient(
       100.5deg,
       oklch(0.536 0.187 261.9deg) -24.4%,
-      oklch(0.9266 0.0263 264.44deg) 71%
+      oklch(0.9266 0.0263 264.44deg) 101%
     );
   }
 }
