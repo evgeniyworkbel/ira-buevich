@@ -2,27 +2,18 @@ import { mobilePhone } from "./constants";
 import { contacts } from "./contacts";
 import { formatPhone } from "./lib";
 
+const generateNavItem = (sectionId: string, label: string) => ({
+  sectionId,
+  href: `#${sectionId}`,
+  label,
+});
+
 export const navItems = {
-  courses: {
-    href: "#courses",
-    label: "Курсы",
-  },
-  speakingClub: {
-    href: "#speaking-clubs",
-    label: "Разговорные клубы",
-  },
-  aboutMe: {
-    href: "#about-me",
-    label: "Обо мне",
-  },
-  faq: {
-    href: "#faq",
-    label: "Вопросы и ответы",
-  },
-  contacts: {
-    href: "#contacts",
-    label: "Контакты",
-  },
+  courses: generateNavItem("courses", "Курсы"),
+  speakingClubs: generateNavItem("speaking-clubs", "Разговорные клубы"),
+  aboutMe: generateNavItem("about-me", "Обо мне"),
+  faq: generateNavItem("faq", "Вопросы и ответы"),
+  contacts: generateNavItem("contacts", "Контакты"),
   mobilePhone: {
     href: contacts.mobilePhone,
     label: formatPhone(mobilePhone),
