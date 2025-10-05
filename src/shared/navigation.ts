@@ -8,8 +8,8 @@ export const navItems = {
     label: "Курсы",
   },
   speakingClub: {
-    href: "#speaking-club",
-    label: "Разговорный клуб",
+    href: "#speaking-clubs",
+    label: "Разговорные клубы",
   },
   aboutMe: {
     href: "#about-me",
