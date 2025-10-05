@@ -9,7 +9,7 @@ export function Footer() {
     <Container className="rounded-t-[20px] bg-background-surface py-6 text-foreground-surface">
       <footer
         id={navItems.contacts.href}
-        className="grid grid-cols-1 justify-items-center gap-8 text-center lg:grid-cols-5 lg:items-center lg:gap-5"
+        className="grid grid-cols-1 justify-items-center gap-8 text-center text-sm lg:grid-cols-5 lg:items-center lg:gap-5"
       >
         <Link href="/">
           <Image
@@ -45,7 +45,7 @@ export function Footer() {
                 />
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href={contacts.mobilePhone} target="_blank" rel="noopener noreferrer">
                 <Image
                   src="/phone.svg"
@@ -54,7 +54,7 @@ export function Footer() {
                   height={32}
                 />
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href={contacts.location} target="_blank" rel="noopener noreferrer">
                 <Image

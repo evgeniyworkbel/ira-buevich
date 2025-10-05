@@ -1,1 +1,1 @@
-export const mobilePhone = "+375296105797";
+export const mobilePhone = "+375297777777";

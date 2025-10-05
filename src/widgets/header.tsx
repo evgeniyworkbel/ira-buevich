@@ -20,9 +20,9 @@ export function Header() {
           <Link href={navItems.aboutMe.href}>{navItems.aboutMe.label}</Link>
           <Link href={navItems.faq.href}>{navItems.faq.label}</Link>
           <Link href={navItems.contacts.href}>{navItems.contacts.label}</Link>
-          <Link className="ml-auto" href={navItems.mobilePhone.href}>
+          {/* <Link className="ml-auto" href={navItems.mobilePhone.href}>
             {navItems.mobilePhone.label}
-          </Link>
+          </Link> */}
         </nav>
         <Image
           className="xl:hidden"
