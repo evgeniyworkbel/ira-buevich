@@ -1,5 +1,7 @@
-import { Button, Container } from "@/shared/ui";
 import Image from "next/image";
+import Link from "next/link";
+import { navItems } from "@/shared/navigation";
+import { Button, Container } from "@/shared/ui";
 
 export function Hero() {
   return (
@@ -16,13 +18,16 @@ export function Hero() {
             Давайте разберём, какие вариранты подходят лучше всего
           </p>
         </hgroup>
-        <div className="z-10 flex flex-col items-center gap-6 xl:flex-row xl:justify-end">
+        <div className="z-10 flex flex-col items-center gap-6 xl:flex-row xl:justify-end xl:gap-10">
           <Button className="bg-linear-125 from-[oklch(0.72_0.192_149.5_/_70%)] to-[oklch(0.885_0.076_151.2_/_70%)] px-7 text-base xl:px-8.5 xl:text-lg">
             Записаться на пробное занятие
           </Button>
-          <Button className="bg-linear-125 from-[oklch(0.564_0.174_262.21)] to-[oklch(0.324_0.065_263.11)] px-6 text-base xl:text-lg">
+          <Link
+            className="rounded-[40px] bg-linear-125 from-[oklch(0.564_0.174_262.21)] to-[oklch(0.324_0.065_263.11)] px-6 py-4 text-base font-semibold text-foreground-surface xl:text-lg"
+            href={navItems.courses.href}
+          >
             Выберите свой курс
-          </Button>
+          </Link>
         </div>
         <Image
           className="absolute right-0 bottom-0 -translate-x-6 xl:w-64 xl:-translate-x-8"

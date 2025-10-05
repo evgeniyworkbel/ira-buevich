@@ -1,10 +1,11 @@
 import { Container, Dot, Title } from "@/shared/ui";
 import { speakingClubsBenefits } from "../model/data";
 import Image from "next/image";
+import { navItems } from "@/shared/navigation";
 
 export function SpeakingClubs() {
   return (
-    <Container>
+    <Container id={navItems.speakingClubs.sectionId}>
       <Title
         title="Разговорные клубы"
         description="Вы знаете грамматику, но впадаете в ступор при живом общении? Вы учите слова, но не можете их вовремя вспомнить в диалоге? Вы не одиноки. Именно для решения этих задач я создала Speaking Club!"

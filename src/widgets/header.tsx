@@ -16,7 +16,7 @@ export function Header() {
         />
         <nav className="hidden justify-between gap-x-14 font-semibold xl:flex">
           <Link href={navItems.courses.href}>{navItems.courses.label}</Link>
-          <Link href={navItems.speakingClub.href}>{navItems.speakingClub.label}</Link>
+          <Link href={navItems.speakingClubs.href}>{navItems.speakingClubs.label}</Link>
           <Link href={navItems.aboutMe.href}>{navItems.aboutMe.label}</Link>
           <Link href={navItems.faq.href}>{navItems.faq.label}</Link>
           <Link href={navItems.contacts.href}>{navItems.contacts.label}</Link>

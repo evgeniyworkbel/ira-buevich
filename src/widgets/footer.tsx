@@ -8,7 +8,7 @@ export function Footer() {
   return (
     <Container className="rounded-t-[20px] bg-background-surface py-6 text-foreground-surface">
       <footer
-        id={navItems.contacts.href}
+        id={navItems.contacts.sectionId}
         className="grid grid-cols-1 justify-items-center gap-8 text-center text-sm lg:grid-cols-5 lg:items-center lg:gap-5"
       >
         <Link href="/">
@@ -27,7 +27,7 @@ export function Footer() {
         </div>
         <ul className="flex flex-col gap-2">
           <Link href={navItems.courses.href}>{navItems.courses.label}</Link>
-          <Link href={navItems.speakingClub.href}>{navItems.speakingClub.label}</Link>
+          <Link href={navItems.speakingClubs.href}>{navItems.speakingClubs.label}</Link>
         </ul>
         <ul className="flex flex-col gap-2">
           <Link href={navItems.aboutMe.href}>{navItems.aboutMe.label}</Link>

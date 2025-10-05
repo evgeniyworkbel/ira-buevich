@@ -1,10 +1,14 @@
 import { Container, Title } from "@/shared/ui";
 import { coursesData } from "../model/data";
 import { CourseCard } from "./course-card";
+import { navItems } from "@/shared/navigation";
 
 export function Courses() {
   return (
-    <Container className="bg-background-surface text-foreground-surface">
+    <Container
+      id={navItems.courses.sectionId}
+      className="bg-background-surface text-foreground-surface"
+    >
       <Title
         descriptionClassName="text-foreground-surface"
         title="Выберите свой уровень"
