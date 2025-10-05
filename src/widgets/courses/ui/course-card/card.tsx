@@ -1,5 +1,6 @@
 import { cn } from "@/shared/lib";
-import { Button, Chip, Dot } from "@/shared/ui";
+import { contacts } from "@/shared/contacts";
+import { ButtonLink, Chip, Dot } from "@/shared/ui";
 import { Course } from "../../model/types";
 import styles from "./card.module.css";
 import { getLessonsLabel } from "../../lib/getLessonsLabel";
@@ -42,9 +43,13 @@ export function CourseCard({
           </li>
         ))}
       </ul>
-      <Button className={cn("mx-auto mt-auto w-3/4 py-3 xl:w-full", styles.button)}>
+      <ButtonLink
+        className={cn("mx-auto mt-auto w-11/12 py-3 xl:w-full", styles.button)}
+        href={contacts.instagram}
+        target="_blank"
+      >
         Записаться на курс
-      </Button>
+      </ButtonLink>
     </div>
   );
 }
