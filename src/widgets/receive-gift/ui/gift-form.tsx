@@ -11,6 +11,7 @@ export function GiftForm() {
           label="Специальное кодовое слово"
           placeholder="Введите специальный код"
         />
+        {/** @todo: добавить валидацию (в шаред есть регулярка) */}
         <FormInput name="email" label="Введите свой Email" placeholder="email@example.com" />
         <Button
           className="mt-9 w-full bg-accent py-3 xl:h-13 xl:rounded-2xl xl:text-lg"
