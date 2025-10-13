@@ -1,26 +1,58 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: oklch(1 0 0deg);
+  --foreground: oklch(0 0 0deg);
+  --foreground-secondary: oklch(0.554 0.041 257.4deg);
+  --background-surface: oklch(0.54 0.19 262deg);
+  --foreground-surface: oklch(1 0 0deg);
+  --accent: oklch(0.72 0.19 150deg);
+  --card-border: oklch(0.642 0.141 262.6deg);
+
+  interpolate-size: allow-keywords;
+}
+
+@theme {
+  --color-*: initial;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-background-surface: var(--background-surface);
+  --color-foreground-surface: var(--foreground-surface);
+  --color-accent: var(--accent);
+  --color-card-border: var(--card-border);
+  --font-inter: var(--font-inter);
+  --font-urbanist: var(--font-urbanist);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: oklch(0 0 0deg);
+    --foreground: oklch(1 0 0deg);
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+}
+
+#hero-card {
+  background: linear-gradient(
+    96deg,
+    oklch(0.536 0.187 261.9deg) -24.4%,
+    oklch(0.927 0.026 264.4deg) 122.2%
+  );
+
+  @media (width >= 1280px) {
+    background: linear-gradient(
+      100.5deg,
+      oklch(0.536 0.187 261.9deg) -24.4%,
+      oklch(0.9266 0.0263 264.44deg) 101%
+    );
+  }
 }

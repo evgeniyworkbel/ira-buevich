@@ -1,0 +1,19 @@
+.card {
+  background: linear-gradient(
+    86.16deg,
+    oklch(1 0 0deg / 20%) 11.14%,
+    oklch(1 0 0deg / 3.5%) 113.29%
+  );
+}
+
+.chip {
+  background-color: oklch(0.536 0.187 261.9deg / 40%);
+}
+
+.button {
+  background: linear-gradient(
+    124.78deg,
+    oklch(0.72 0.192 149deg / 60%) 0%,
+    oklch(0.82 0.189 152deg / 60%) 100%
+  );
+}
