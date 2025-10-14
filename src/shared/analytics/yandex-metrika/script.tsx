@@ -1,17 +1,17 @@
 "use client";
 
 import Script from "next/script";
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
-import { YM_COUNTER_ID } from "./config";
+// import { usePathname } from "next/navigation";
+// import { useEffect } from "react";
+// import { YM_COUNTER_ID } from "./config";
 
 export const YandexMetrikaScript = () => {
-  const pathname = usePathname();
-  useEffect(() => {
-    // @ts-expect-error "ym" is global function which is created by Yandex metrica script.
-    // To leran more, see sources of external lib https://github.com/v-doronin/next-yandex-metrica/blob/main/src/lib/ym.ts
-    window.ym(YM_COUNTER_ID, "hit", pathname);
-  }, [pathname]);
+  // const pathname = usePathname();
+  // useEffect(() => {
+  //   // @ts-expect-error "ym" is global function which is created by Yandex metrica script.
+  //   // To leran more, see sources of external lib https://github.com/v-doronin/next-yandex-metrica/blob/main/src/lib/ym.ts
+  //   window.ym(YM_COUNTER_ID, "hit", pathname);
+  // }, [pathname]);
 
   return (
     <Script
