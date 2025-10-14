@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
-import { YandexMetrikaNoscript, YandexMetrikaScript } from "@/shared/analytics";
+// import { YandexMetrikaNoscript, YandexMetrikaScript } from "@/shared/analytics";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,9 +25,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=104625231', 'ym');
+
+    ym(104625231, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
+          }}
+        ></script>
+      </head>
       <body className={`${inter.variable} ${urbanist.variable} antialiased`}>
-        <YandexMetrikaScript />
-        <YandexMetrikaNoscript />
+        {/* <YandexMetrikaScript /> */}
+        {/* <YandexMetrikaNoscript /> */}
         {children}
       </body>
     </html>
