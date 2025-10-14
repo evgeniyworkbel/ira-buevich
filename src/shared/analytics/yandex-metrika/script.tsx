@@ -1,12 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Script from "next/script";
-import { YM_COUNTER_ID } from "./config";
-import { useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
+import { YM_COUNTER_ID } from "./config";
 
-export const YandexMetrika = () => {
+export const YandexMetrikaScript = () => {
   const pathname = usePathname();
   useEffect(() => {
     // @ts-expect-error "ym" is global function which is created by Yandex metrica script.
@@ -15,13 +14,11 @@ export const YandexMetrika = () => {
   }, [pathname]);
 
   return (
-    <>
-      {/* Yandex.Metrika counter START */}
-      <Script
-        id="yandex-metrika-analytics"
-        type="text/javascript"
-        dangerouslySetInnerHTML={{
-          __html: `
+    <Script
+      id="yandex-metrika-analytics"
+      type="text/javascript"
+      dangerouslySetInnerHTML={{
+        __html: `
          (function(m,e,t,r,i,k,a){
           m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
           m[i].l=1*new Date();
@@ -30,18 +27,7 @@ export const YandexMetrika = () => {
           })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=${YM_COUNTER_ID}', 'ym');
 
           ym(${YM_COUNTER_ID}, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
-        }}
-      />
-      <noscript>
-        <Image
-          className="sr-only"
-          src={`https://mc.yandex.ru/watch/${YM_COUNTER_ID}`}
-          width={1}
-          height={1}
-          alt=""
-        />
-      </noscript>
-      {/* Yandex.Metrika counter END */}
-    </>
+      }}
+    />
   );
 };
