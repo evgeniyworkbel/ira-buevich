@@ -1,1 +1,2 @@
-export { YandexMetrika } from "./yandex-metrika";
+export { YandexMetrikaScript } from "./script";
+export { YandexMetrikaNoscript } from "./noscript";

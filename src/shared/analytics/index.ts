@@ -1,1 +1,1 @@
-export { YandexMetrika } from "./yandex-metrika";
+export * from "./yandex-metrika";
