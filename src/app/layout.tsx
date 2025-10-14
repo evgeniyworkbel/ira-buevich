@@ -25,10 +25,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <YandexMetrikaScript />
-      </head>
       <body className={`${inter.variable} ${urbanist.variable} antialiased`}>
+        <YandexMetrikaScript />
         <YandexMetrikaNoscript />
         {children}
       </body>
