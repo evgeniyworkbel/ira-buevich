@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { YM_COUNTER_ID } from "./config";
 // import { usePathname } from "next/navigation";
 // import { useEffect } from "react";
 // import { YM_COUNTER_ID } from "./config";
@@ -16,17 +17,15 @@ export const YandexMetrikaScript = () => {
   return (
     <Script
       id="yandex-metrika-analytics"
-      type="text/javascript"
       dangerouslySetInnerHTML={{
-        __html: `
-             (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.webvisor.org/metrika/tag_ww.js?id=104625231', 'ym');
+        __html: `(function(m,e,t,r,i,k,a){
+          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+          m[i].l=1*new Date();
+          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=${YM_COUNTER_ID}', 'ym');
 
-    ym(104625231, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
+        ym(${YM_COUNTER_ID}, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
       }}
     />
   );
