@@ -1,7 +1,8 @@
-import { Container, Dot, Title } from "@/shared/ui";
-import { speakingClubsBenefits } from "../model/data";
 import Image from "next/image";
+import { ButtonLink, Container, Dot, Title } from "@/shared/ui";
 import { navItems } from "@/shared/navigation";
+import { contacts } from "@/shared/contacts";
+import { speakingClubsBenefits } from "../model/data";
 
 export function SpeakingClubs() {
   return (
@@ -50,6 +51,14 @@ export function SpeakingClubs() {
             alt=""
           />
         </div>
+        {/** @todo: добавить ОТЗЫВЫ */}
+        <ButtonLink
+          className="mx-auto mt-auto w-11/12 max-w-[340px] bg-linear-125 from-accent to-[oklch(0.82_0.189_152)] py-3 xl:h-13.5"
+          href={contacts.instagramDM}
+          target="_blank"
+        >
+          Купить билет
+        </ButtonLink>
       </section>
     </Container>
   );
