@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Urbanist } from "next/font/google";
-import { YandexMetrikaScript } from "@/shared/analytics";
+import { YandexMetrikaNoscript, YandexMetrikaScript } from "@/shared/analytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -29,8 +29,7 @@ export default function RootLayout({
         <YandexMetrikaScript />
       </head>
       <body className={`${inter.variable} ${urbanist.variable} antialiased`}>
-        {/* <YandexMetrikaScript /> */}
-        {/* <YandexMetrikaNoscript /> */}
+        <YandexMetrikaNoscript />
         {children}
       </body>
     </html>
