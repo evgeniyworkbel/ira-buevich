@@ -30,7 +30,6 @@ export default function RootLayout({
       <head>
         <Script
           id="yandex-metrika-analytics"
-          type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `(function(m,e,t,r,i,k,a){
         m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -41,7 +40,7 @@ export default function RootLayout({
 
     ym(${YM_COUNTER_ID}, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
           }}
-        ></Script>
+        />
       </head>
       <body className={`${inter.variable} ${urbanist.variable} antialiased`}>
         {/* <YandexMetrikaScript /> */}
