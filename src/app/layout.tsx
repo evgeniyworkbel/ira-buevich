@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Inter, Urbanist } from "next/font/google";
 import "./globals.css";
 import { YM_COUNTER_ID } from "@/shared/analytics/yandex-metrika/config";
@@ -27,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        <Script
+          id="yandex-metrika-analytics"
           type="text/javascript"
           dangerouslySetInnerHTML={{
             __html: `(function(m,e,t,r,i,k,a){
@@ -39,7 +41,7 @@ export default function RootLayout({
 
     ym(${YM_COUNTER_ID}, 'init', {ssr:true, webvisor:true, trackHash:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});`,
           }}
-        ></script>
+        ></Script>
       </head>
       <body className={`${inter.variable} ${urbanist.variable} antialiased`}>
         {/* <YandexMetrikaScript /> */}
