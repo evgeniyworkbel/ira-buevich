@@ -13,7 +13,6 @@ import {
 
 export default function Page() {
   return (
-    // todo: сделать smooth скролл
     // todo: добавить Отзывы и кнопку Наверх
     <div className="min-h-screen max-w-[1920px] bg-background text-foreground">
       <Header />
