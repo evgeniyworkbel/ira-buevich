@@ -7,6 +7,7 @@ import {
   Header,
   Hero,
   LearningFormats,
+  ReadyToSpeak,
   SpeakingClubs,
 } from "@/widgets";
 
@@ -23,6 +24,7 @@ export default function Page() {
         <AboutMe />
         <Faq />
         {/* <ReceiveGift /> */}
+        <ReadyToSpeak />
       </main>
       <Footer />
     </div>

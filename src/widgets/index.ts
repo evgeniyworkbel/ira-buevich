@@ -7,3 +7,4 @@ export { AboutMe } from "./about-me";
 export { Faq } from "./faq";
 export { Footer } from "./footer";
 export { ReceiveGift } from "./receive-gift";
+export { ReadyToSpeak } from "./ready-to-speak";
