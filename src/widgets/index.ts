@@ -1,5 +1,5 @@
 export { Header } from "./header";
-export { Hero } from "./hero";
+export { Hero } from "./hero/ui/hero";
 export { Courses } from "./courses/ui/courses";
 export { SpeakingClubs } from "./speaking-clubs";
 export { LearningFormats } from "./learning-formats";

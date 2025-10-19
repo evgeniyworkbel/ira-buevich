@@ -45,22 +45,6 @@ body {
   font-family: var(--font-inter);
 }
 
-#hero-card {
-  background: linear-gradient(
-    96deg,
-    oklch(0.536 0.187 261.9deg) -24.4%,
-    oklch(0.927 0.026 264.4deg) 122.2%
-  );
-
-  @media (width >= 1280px) {
-    background: linear-gradient(
-      100.5deg,
-      oklch(0.536 0.187 261.9deg) -24.4%,
-      oklch(0.9266 0.0263 264.44deg) 101%
-    );
-  }
-}
-
 .lock-body {
   overflow: hidden;
 }

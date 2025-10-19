@@ -1,13 +1,17 @@
 import Image from "next/image";
 import { Container, ButtonLink } from "@/shared/ui";
 import { contacts } from "@/shared/contacts";
+import { cn } from "@/shared/lib";
+import styles from "./hero.module.css";
 
 export function Hero() {
   return (
     <Container className="bg-background-surface text-foreground-surface">
       <div
-        id="hero-card"
-        className="relative flex min-h-[500px] flex-col justify-between rounded-[40px] border-4 border-[oklch(0.642_0.141_262.6)] px-4.5 py-6 xl:min-h-[450px] xl:justify-end xl:gap-14 xl:border-10 xl:p-12"
+        className={cn(
+          "relative flex min-h-[500px] flex-col justify-between rounded-[40px] border-4 border-[oklch(0.642_0.141_262.6)] px-4.5 py-6 xl:min-h-[450px] xl:justify-end xl:gap-14 xl:border-10 xl:p-12",
+          styles.card,
+        )}
       >
         <hgroup className="leading-relaxed xl:max-w-[790px]">
           <h1 className="text-[24px] font-bold xl:text-4xl">
