@@ -60,3 +60,7 @@ body {
     );
   }
 }
+
+.lock-body {
+  overflow: hidden;
+}
