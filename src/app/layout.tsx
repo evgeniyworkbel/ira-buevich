@@ -16,6 +16,7 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   title: "Lingua",
   description: "Школа английского языка",
+  formatDetection: { telephone: false, date: false, email: false, address: false },
 };
 
 export default function RootLayout({
