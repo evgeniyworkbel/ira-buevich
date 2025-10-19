@@ -13,7 +13,7 @@ import {
 
 export default function Page() {
   return (
-    // todo: добавить Отзывы и кнопку Наверх
+    // todo: добавить Отзывы, кнопку Наверх и красивые ссылки в соцсетях (фавиконы и прочее)
     <div className="min-h-screen max-w-[1920px] bg-background text-foreground">
       <Header />
       <main>
