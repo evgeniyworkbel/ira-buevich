@@ -1,2 +1,2 @@
-export { formatPhone } from "./formatPhone";
+export { formatPhone } from "./format-phone";
 export { cn } from "./cn";
